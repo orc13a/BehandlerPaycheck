@@ -2,6 +2,7 @@
 
 import { Center, Container, Flex, Paper, Stack, Stepper, Text, Transition, useMantineColorScheme } from "@mantine/core";
 import styles from './page.module.css';
+import { useState } from "react";
 
 const regions = [
     'Hovedstaden',
@@ -11,11 +12,20 @@ const regions = [
     'Nordjylland'
 ];
 
+const StepperTitle = ({ t }) => (
+    <Text size='xl' fw='bold' mb='xl'>
+        {t}
+    </Text>
+);
+
 export default function Calculator() {
     const { colorScheme } = useMantineColorScheme();
+    const [active, setActive] = useState(0);
+    const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
+    const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
 
     const RegionPaper = ({ region }) => (
-        <Paper w='180px' withBorder p='md' className={colorScheme === 'light' ? styles.regionPaperLight : styles.regionPaperDark }>
+        <Paper onClick={nextStep} w='180px' withBorder p='md' className={colorScheme === 'light' ? styles.regionPaperLight : styles.regionPaperDark}>
             <Text fw={500}>
                 {region}
             </Text>
@@ -25,12 +35,10 @@ export default function Calculator() {
     return (
         <>
             <Container size='sm'>
-                <Stepper w='100%' iconSize={32} active={0}>
+                <Stepper w='100%' iconSize={32} active={active} onStepClick={setActive}>
                     <Stepper.Step aria-label='Vælg region'>
                         <Flex px='md' py='sm' direction='column'>
-                            <Text size='xl' fw='bold' mb='xl'>
-                                Vælg region
-                            </Text>
+                            <StepperTitle t="Vælg region" />
                             <Center>
                                 <Stack>
                                     {regions.map(r => (
@@ -41,13 +49,19 @@ export default function Calculator() {
                         </Flex>
                     </Stepper.Step>
                     <Stepper.Step aria-label='Vælg entreprenør'>
-
+                        <Flex px='md' py='sm' direction='column'>
+                            <StepperTitle t="Vælg entreprenør" />
+                        </Flex>
                     </Stepper.Step>
                     <Stepper.Step aria-label='Indsæt data for vagter'>
+                        <Flex px='md' py='sm' direction='column'>
 
+                        </Flex>
                     </Stepper.Step>
                     <Stepper.Step aria-label='Færdige overblik'>
+                        <Flex px='md' py='sm' direction='column'>
 
+                        </Flex>
                     </Stepper.Step>
                 </Stepper>
             </Container>
