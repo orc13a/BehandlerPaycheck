@@ -1,0 +1,21 @@
+.regionPaperLight {
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.regionPaperLight:hover {
+    background-color: #F1F3F5;
+    transition: 0.4s;
+}
+
+.regionPaperDark {
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.regionPaperDark:hover {
+    background-color: #212529;
+    transition: 0.4s;
+}

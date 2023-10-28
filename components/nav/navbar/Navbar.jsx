@@ -19,9 +19,9 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Box p='md'>
+            <Box p='md' mb='xl'>
                 <Container size='xl'>
-                    <Paper shadow='lg' p='lg' h='100%' withBorder>
+                    <Paper shadow='md' p='lg' h='100%' withBorder={colorScheme === 'dark'}>
                         <Flex justify='space-between' align='center' h='100%'>
                             <Box>
                                 <Text
