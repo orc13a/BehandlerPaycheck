@@ -1,0 +1,55 @@
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); */
+
+:root {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.homeSvgBox {
+    text-align: right;
+}
+
+@media only screen and (max-width: 400px) {
+    .homeSvgBox > span {
+        font-weight: 900;
+        font-size: 3em !important;
+        position: absolute;
+        bottom: 0px;
+        right: 25px;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .homeSvgBox > span {
+        font-weight: 900;
+        font-size: 4em !important;
+        position: absolute;
+        bottom: 0px;
+        right: 25px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .infoText {
+        font-size: 1.5em !important;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .infoText {
+        font-size: 2em !important;
+    }
+}
+
+.flying {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
