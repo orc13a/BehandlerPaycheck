@@ -43,7 +43,7 @@ export default function Calculator() {
             <Container size='sm'>
                 <form>
                     <Stepper w='100%' iconSize={32} active={active} onStepClick={setActive}>
-                        <Stepper.Step aria-label='Vælg region'>
+                        <Stepper.Step  aria-label='Vælg region'>
                             <Flex px='md' py='sm' direction='column'>
                                 <StepperTitle t="Vælg region" />
                                 <Center>
@@ -55,17 +55,17 @@ export default function Calculator() {
                                 </Center>
                             </Flex>
                         </Stepper.Step>
-                        <Stepper.Step aria-label='Vælg entreprenør'>
+                        <Stepper.Step allowStepSelect={false} aria-label='Vælg entreprenør'>
                             <Flex px='md' py='sm' direction='column'>
                                 <StepperTitle t="Vælg entreprenør" />
                             </Flex>
                         </Stepper.Step>
-                        <Stepper.Step aria-label='Indsæt data for vagter'>
+                        <Stepper.Step allowStepSelect={false} aria-label='Indsæt data for vagter'>
                             <Flex px='md' py='sm' direction='column'>
 
                             </Flex>
                         </Stepper.Step>
-                        <Stepper.Step aria-label='Færdige overblik'>
+                        <Stepper.Step allowStepSelect={false} aria-label='Færdige overblik'>
                             <Flex px='md' py='sm' direction='column'>
 
                             </Flex>
