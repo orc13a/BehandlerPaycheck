@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function Navbar() {
+    const matchesMediaQueryMenu = useMediaQuery('(max-width: 429px)');
     const matchesMediaQuery = useMediaQuery('(min-width: 430px)');
     const { setColorScheme, colorScheme } = useMantineColorScheme();
 
@@ -34,27 +35,30 @@ export default function Navbar() {
                                     BP
                                 </Text>
                             </Box>
-                            <Flex direction='row' align='center' gap='lg'>
-                                <Text component={Link} href="/calculator" fw={getActive('calculator') ? 600 : 400} size="18px" className={colorScheme === 'light' ? styles.navTextLight : styles.navTextDark}>
-                                    Udregner
-                                </Text>
-                                <Text component={Link} href="/archives" fw={getActive('archives') ? 600 : 400} size="18px" className={colorScheme === 'light' ? styles.navTextLight : styles.navTextDark}>
-                                    Arkiver
-                                </Text>
-                            </Flex>
+                            {!matchesMediaQueryMenu ? (
+                                <Flex direction='row' align='center' gap='lg'>
+                                    <Text component={Link} href="/calculator" fw={getActive('calculator') ? 600 : 400} size="18px" className={colorScheme === 'light' ? styles.navTextLight : styles.navTextDark}>
+                                        Udregner
+                                    </Text>
+                                    <Text component={Link} href="/archives" fw={getActive('archives') ? 600 : 400} size="18px" className={colorScheme === 'light' ? styles.navTextLight : styles.navTextDark}>
+                                        Arkiver
+                                    </Text>
+                                    <Text component={Link} href="/about" fw={getActive('archives') ? 600 : 400} size="18px" className={colorScheme === 'light' ? styles.navTextLight : styles.navTextDark}>
+                                        Om
+                                    </Text>
+                                </Flex>
+                            ) : null}
                             <Box>
-                                {/* <ActionIcon variant='subtle' size='lg'>
-                                    <IconMenuDeep />
-                                </ActionIcon> */}
-                                {/* {matchesMediaQuery ? ( */}
-                                <Transition mounted={matchesMediaQuery} transition='scale' duration={400} timingFunction="ease">
-                                    {(styles) =>
-                                        <ActionIcon onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')} style={styles} variant='subtle' size='lg'>
-                                            {colorScheme === 'light' ? <IconMoon /> : <IconSun />}
-                                        </ActionIcon>
-                                    }
-                                </Transition>
-                                {/* ) : null} */}
+                                {matchesMediaQueryMenu ? (
+                                    <ActionIcon variant='subtle' size='lg'>
+                                        <IconMenuDeep />
+                                    </ActionIcon>
+                                ) : null}
+                                {matchesMediaQuery ? (
+                                    <ActionIcon onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')} style={styles} variant='subtle' size='lg'>
+                                        {colorScheme === 'light' ? <IconMoon /> : <IconSun />}
+                                    </ActionIcon>
+                                ) : null}
                             </Box>
                         </Flex>
                     </Paper>
