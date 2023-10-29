@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript, createTheme, Button, ActionIcon } from '@mantine/core';
 import './globals.css'
 import packageJson from '../package.json';
+import { ModalsProvider } from '@mantine/modals';
 
 // const inter = Inter({ subsets: ['latin'] })
 const ibmPlexSans = IBM_Plex_Sans({
@@ -70,9 +71,11 @@ export default function RootLayout({ children }) {
             </head>
             {/* <body className={plusJakartaSans.className} style={{ height: '100%' }}> */}
             <body className={ibmPlexSans.className} style={{ height: '100%' }}>
-            {/* <body style={{ height: '100%' }}> */}
+                {/* <body style={{ height: '100%' }}> */}
                 <MantineProvider theme={theme} defaultColorScheme="light">
-                    {children}
+                    <ModalsProvider>
+                        {children}
+                    </ModalsProvider>
                 </MantineProvider>
             </body>
         </html>

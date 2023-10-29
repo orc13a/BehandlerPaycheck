@@ -12,7 +12,7 @@
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #333;
+    background-color: black;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
     transform: scaleX(0);
@@ -46,4 +46,30 @@
 .navTextDark:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+
+
+.navDrawerTextLight {
+    font-weight: 400;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+}
+
+.navDrawerTextLight:hover {
+    background-color: #F2F0FF;
+    transition: 0.5s;
+}
+
+.navDrawerTextDark {
+    font-weight: 400;
+    cursor: pointer;
+    color: #C1C2C5;
+    transition: 0.5s;
+}
+
+.navDrawerTextDark:hover {
+    background-color: #3B3979;
+    transition: 0.5s;
 }
