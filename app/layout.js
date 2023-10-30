@@ -4,7 +4,7 @@
 import { IBM_Plex_Sans } from 'next/font/google'
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import '@mantine/core/styles.css';
-import { MantineProvider, ColorSchemeScript, createTheme, Button, ActionIcon } from '@mantine/core';
+import { MantineProvider, ColorSchemeScript, createTheme, Button, ActionIcon, Select } from '@mantine/core';
 import './globals.css'
 import packageJson from '../package.json';
 import { ModalsProvider } from '@mantine/modals';
@@ -59,6 +59,12 @@ const theme = createTheme({
                 radius: 'md'
             },
         }),
+        Select: Select.extend({
+            defaultProps: {
+                size: 'md',
+                radius: 'md'
+            },
+        })
     },
 });
 
