@@ -1,7 +1,7 @@
 import Navbar from "@/components/nav/navbar/Navbar";
 
 export const metadata = {
-    title: 'BehandlerPaycheck',
+    title: 'BehandlerNet',
 }
 
 export default function CalculatorLayout({ children }) {

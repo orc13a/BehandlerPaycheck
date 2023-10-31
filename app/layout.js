@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="da" style={{ height: '100%' }}>
             <head>
-                <title>BehandlerPaycheck</title>
+                <title>BehandlerNet</title>
                 <ColorSchemeScript />
             </head>
             {/* <body className={plusJakartaSans.className} style={{ height: '100%' }}> */}

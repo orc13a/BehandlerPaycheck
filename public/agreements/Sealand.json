@@ -1,0 +1,111 @@
+{
+    "Ambulance Sjælland": {},
+    "Falck": {
+        "version": "2020-2023",
+        "overenskomst": "Redderoverenskomst i Provinsen 2020/2023 - mellem Dansk Erhverv Arbejdsgiver og 3F Fagligt Fælles Forbund, Transportgruppen",
+        "grundløn": 26467.95,
+        "kvalifikationsløn": {
+            "Ambulanceassistenter": 1033.87,
+            "Ambulancebehandlere": 2023.94,
+            "Paramedicinere": 2453.65
+        },
+        "genetillæg": {
+            "hverdage": {
+                "dag": {
+                    "tidsrum": "07:00-18:00",
+                    "tillæg": 0.00
+                },
+                "Aften": {
+                    "tidsrum": "18:00-24:00",
+                    "tillæg": 21.75
+                },
+                "nat": {
+                    "tidsrum": "24:00-07:00",
+                    "tillæg": 39.86
+                }
+            },
+            "weekend": {
+                "tidsrum": "07.00 til mandag kl. 07.00",
+                "tillæg": 57.95
+            },
+            "helligdage": {
+                "skæve helligdage": {
+                    "dage": [
+                        "Nytårsdag",
+                        "Skærtorsdag",
+                        "Langfredag",
+                        "2. påskedag",
+                        "Kr. Himmelfartsdag",
+                        "2. pinsedag",
+                        "1. juledag",
+                        "2. juledag"
+                    ],
+                    "tillæg": 49.88,
+                    "tidsrum": "00.00-23.59",
+                    "beskrivelse": "Skæve helligdage defineres som Nytårsdag, Skærtorsdag, Langfredag, 2. påskedag, St. Bededag, Kr. Himmelfartsdag, 2. pinsedag, 1. juledag og 2. juledag. Tillægget ydes til de medarbejdere, der er planlagt til en vagt, som starter i tidsrummet kl. 00.00 til kl. 23.59 på helligdagen."
+                },
+                "øvrige helligdage": {
+                    "dage": [
+                        "1. maj,",
+                        "Grundlovsdag",
+                        "Juleaftensdag",
+                        "Nytårsaftensdag"
+                    ],
+                    "tillæg": 49.88,
+                    "tidsrum": "12.00-23.59",
+                    "beskrivelse": "Øvrige helligdage defineres som 1. maj, Grundlovsdag, Juleaftensdag og Nytårsaftensdag. Tillægget ydes til de medarbejdere, der er planlagt til en vagt, som starter i tidsrummet kl. 00.00 til kl. 23.59 på helligdagen, idet betaling dog først udløses fra kl. 12.00."
+                }
+            }
+        },
+        "vagtordning": {
+            "Dagvagt": 0.00,
+            "2-skiftet vagt": 1032.70,
+            "3+2+2-vagt": 2517.89,
+            "Dag/aftenvagt": 2634.79,
+            "DDAA-vagt": 3103.46,
+            "DDN-vagt": 3600.16,
+            "Garantidøgnvagt": {
+                "DV9": {
+                    "tillæg": 4346.91
+                },
+                "DV10": {
+                    "tillæg": 4359.59
+                },
+                "DV11": {
+                    "tillæg": 4350.94
+                },
+                "DV12": {
+                    "tillæg": 4342.56
+                },
+                "DV13": {
+                    "tillæg": 4399.02
+                }
+            },
+            "3-skiftet vagt": 3387.02,
+            "3+2+2 med 3 A-vagter": 2307.70,
+            "3+2+2 med 4 A-vagter": 2205.74,
+            "DN-vagt": 4356.72
+        },
+        "anciennitetstillæg": {
+            "Beskrivelse": "års tjeneste",
+            "0": 0.00,
+            "1": 0.00,
+            "2": 1052.15,
+            "3": 1104.90,
+            "4": 1104.90,
+            "5": 1210.40,
+            "6": 1210.40,
+            "7": 1268.43,
+            "8": 1268.43,
+            "9": 1326.45,
+            "10": 1326.45,
+            "11": 1379.20,
+            "12": 1379.20,
+            "13": 1442.50
+        },
+        "fuldtidsansatte": {
+            "reddertillæg": 792.00,
+            "særligttillæg": 112.00
+        }
+    }
+}

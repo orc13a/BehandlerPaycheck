@@ -8,6 +8,10 @@
     padding: 0px;
 }
 
+input, select {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
 a {
     text-decoration: none;
 }

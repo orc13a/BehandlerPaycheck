@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { ActionIcon, Badge, Box, Container, Drawer, Flex, Paper, Stack, Text, Transition, useMantineColorScheme } from "@mantine/core";
 import { IconArchive, IconInfoSquareRounded, IconMenuDeep, IconMoon, IconNumber, IconNumbers, IconSun, IconX } from "@tabler/icons-react";
@@ -115,7 +115,7 @@ export default function Navbar() {
                                     variant="gradient"
                                     gradient={{ from: 'grape', to: 'violet', deg: 0 }}
                                 >
-                                    BP
+                                    BN
                                 </Text>
                             </Box>
                             {!matchesMediaQueryMenu ? (
