@@ -4,6 +4,7 @@ import { Center, Container, Flex, Paper, Stack, Stepper, Text, useMantineColorSc
 import styles from './page.module.css';
 import { useState } from "react";
 import FalckSealandInsert from "@/components/FalckSealandInsert/FalckSealandInsert";
+import { modals } from "@mantine/modals";
 
 const regions = [
     // 'Hovedstaden',
@@ -74,7 +75,7 @@ export default function Calculator() {
                     <IconTerminal2 />
                 </ActionIcon>
             </Affix> */}
-            <Container size='sm'>
+            <Container size='sm' pb='50px'>
                 <Stepper w='100%' iconSize={32} active={active} onStepClick={setActive}>
                     <Stepper.Step allowStepSelect={false} aria-label='Vælg region'>
                         <Flex px='md' py='sm' direction='column'>
