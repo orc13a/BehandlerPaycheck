@@ -36,7 +36,8 @@ const palePurpleColors = [
 ];
 
 const theme = createTheme({
-    fontFamily: 'Plus Jakarta Sans, sans-serif',
+    // fontFamily: 'Plus Jakarta Sans, sans-serif',
+    fontFamily: 'IBM Plex Sans, sans-serif',
     primaryColor: 'pale-purple',
     colors: {
         'pale-purple': palePurpleColors,

@@ -1,7 +1,7 @@
 "use client"
 
-import { ActionIcon, Badge, Box, Container, Drawer, Flex, Paper, Stack, Text, Transition, useMantineColorScheme } from "@mantine/core";
-import { IconArchive, IconInfoSquareRounded, IconMenuDeep, IconMoon, IconNumber, IconNumbers, IconSun, IconX } from "@tabler/icons-react";
+import { ActionIcon, Avatar, Badge, Box, Container, Drawer, Flex, Image, Paper, Stack, Text, Transition, useMantineColorScheme } from "@mantine/core";
+import { IconArchive, IconGraph, IconInfoSquareRounded, IconMenuDeep, IconMoon, IconNumber, IconNumbers, IconSun, IconX } from "@tabler/icons-react";
 import styles from './Navbar.module.css';
 import Link from "next/link";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
@@ -21,6 +21,13 @@ export default function Navbar() {
 
     const navTexts = [
         {
+            path: 'statistics',
+            pathname: '/statistics',
+            display: 'Statistik',
+            badgeNr: null,
+            icon: <IconGraph />
+        },
+        {
             path: 'calculator',
             pathname: '/calculator',
             display: 'Omregner',
@@ -34,13 +41,13 @@ export default function Navbar() {
             badgeNr: null,
             icon: <IconArchive />
         },
-        {
-            path: 'about',
-            pathname: '/about',
-            display: 'Om',
-            badgeNr: null,
-            icon: <IconInfoSquareRounded />
-        },
+        // {
+        //     path: 'about',
+        //     pathname: '/about',
+        //     display: 'Om',
+        //     badgeNr: null,
+        //     icon: <IconInfoSquareRounded />
+        // },
     ];
 
     const NavbarMenuText = ({ nt }) => (
@@ -108,7 +115,7 @@ export default function Navbar() {
                     <Paper shadow='md' p='lg' h='100%' withBorder={colorScheme === 'dark'}>
                         <Flex justify='space-between' align='center' h='100%'>
                             <Box>
-                                <Text
+                                {/* <Text
                                     component={Link} href="/"
                                     size="32px"
                                     fw={700}
@@ -116,25 +123,38 @@ export default function Navbar() {
                                     gradient={{ from: 'grape', to: 'violet', deg: 0 }}
                                 >
                                     BN
-                                </Text>
+                                </Text> */}
+                                <a href='/dashboard'>
+                                    <Image
+                                        src="/logo.png"
+                                        h='50px'
+                                    />
+                                </a>
                             </Box>
                             {!matchesMediaQueryMenu ? (
                                 <Flex direction='row' align='center' gap='lg'>
                                     {navTexts.map(nt => <NavbarMenuText nt={nt} />)}
                                 </Flex>
                             ) : null}
-                            <Box>
-                                {matchesMediaQueryMenu ? (
-                                    <ActionIcon variant='subtle' size='lg'>
-                                        <IconMenuDeep onClick={open} />
-                                    </ActionIcon>
-                                ) : null}
-                                {matchesMediaQuery ? (
-                                    <ActionIcon onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')} style={styles} variant='subtle' size='lg'>
-                                        {colorScheme === 'light' ? <IconMoon /> : <IconSun />}
-                                    </ActionIcon>
-                                ) : null}
-                            </Box>
+                            <Flex direction='row' align='center' gap='md'>
+                                <Box>
+                                    <Avatar color='pale-purple'>
+
+                                    </Avatar>
+                                </Box>
+                                <Box>
+                                    {matchesMediaQueryMenu ? (
+                                        <ActionIcon variant='subtle' size='lg'>
+                                            <IconMenuDeep onClick={open} />
+                                        </ActionIcon>
+                                    ) : null}
+                                    {matchesMediaQuery ? (
+                                        <ActionIcon onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')} style={styles} variant='subtle' size='lg'>
+                                            {colorScheme === 'light' ? <IconMoon /> : <IconSun />}
+                                        </ActionIcon>
+                                    ) : null}
+                                </Box>
+                            </Flex>
                         </Flex>
                     </Paper>
                 </Container>
